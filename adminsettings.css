@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 380px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+    width: 100%;
+}
+
+.logo-img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin-top: auto; 
+    flex-grow: 1; 
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .active {
+    background: #e0e0e058;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.logout a {
+    color: #fff;
+    text-align: center;
+    display: block;
+    padding: 1rem;
+    background: rgba(255, 0, 0, 0.6);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logout a:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+.main--content {
+    flex-grow: 1;
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+.main--content.dark-mode {
+    background: #444;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header--title span {
+    display: block;
+    font-size: 1rem;
+    color: #0f531a;
+}
+
+.header--title h2 {
+    font-size: 2rem;
+    color: #08460b;
+}
+
+.topsearch {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+}
+
+.topsearch input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    padding-left: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+}
+
+.topsearch i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+
+/* SETTINGS */
+.settings--content {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings--content.dark-mode {
+    background: #cfcfcf;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.setting span {
+    font-size: 1.2rem;
+}
+
+/* Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Brightness Level Bars */
+.brightness-levels {
+    display: flex;
+    gap: 10px;
+}
+
+.bar {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.bar.active {
+    background-color: #2196F3;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mt.Tarak Rooms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="rooms.css">
+    <script src="rooms.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="rooms.html">ROOMS</a></li>
+                <li><a href="resort.html">RESORT</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="#loginModal" id="loginLink">LOGIN</a></li>
+                <li><button class="primary-btn">BOOK NOW</button></li>
+            </ul>
+        </nav>
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="loginForm">
+                    <h2>Admin Login</h2>
+                    <label for="username">Username</label>
+                    <div class="input-container">
+                        <input type="text" id="username" name="username" required>
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                    <label for="password">Password</label>
+                    <div class="input-container">
+                        <input type="password" id="password" name="password" required>
+                        <i class="fa fa-lock icon"></i>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section>
+        <div class="divider">
+            <h1>Guest House</h1>
+        </div>        
+    </section>
+        <div class="container">
+            <h1>Rooms and Accomodation</h1>
+            <div class="rooms">
+                <!-- Room cards will be dynamically generated here -->
+            </div>    
+        </div>
+        <section class="mapsec">
+            <div class="logoo">
+                <a href="rooms.html">
+                    <img src="logo1.png" alt="log">
+                </a>
+            </div>
+            <div class="smap">
+                <h2>SITE MAP</h2>
+                <ul>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="rooms.html">ROOMS</a></li>
+                    <li><a href="resort.html">RESORT</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="mapcont">
+                <h2>GET IN TOUCH</h2>
+                <par>Mt.Tarak Resort and Guest House, Maap Road,<br>Brgy.Alas-asin, Mariveles, Bataan</par>
+                <figure>
+                    <img src="locicon.png" alt="MAAP Road, Mariveles, Philippines">
+                    <figcaption>MAAP Road, Mariveles, Philippines</figcaption>
+                </figure>
+                <figure>
+                    <img src="emicon.png" alt="Email Icon">
+                    <figcaption>Email: frontdesk@mttarakbataan.com</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="calicon.png" alt="Phone Icon">
+                    <figcaption>Phone: 0999 881 2845</figcaption>
+                </figure>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.358503089158!2d120.53852897886755!3d14.462453572791674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396227b583b7ccb%3A0xcec7a97f6a3f2f7b!2sMt.%20Tarak%20Guest%20House%20and%20Restaurant!5e1!3m2!1sen!2sph!4v1713870323427!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="socmed">
+                <ul>
+                    <li>
+                        FOLLOW US ON: 
+                        <a href="https://www.facebook.com/mttarakbataan" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mt.tarakbataan/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="focont">
+                <ul>
+                    <li><a href="#">© Copyright 2024 - Mt.Tarak Resort and Guest House</a></li>
+                    <li><a href="#">MT.TARAK BATAAN | Capstone Project of BSIT3A</a></li>
+                </ul>
+            </div>
+        </section>
+</body>
+</html>

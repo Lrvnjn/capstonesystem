@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Transactions</title>
+    <link rel="stylesheet" href="dailytransaction.css">
+    <script src="dailytransaction.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <ul class="menu">
+                <a href="#" class="logo-link">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                </a>
+                <li class="active">
+                    <a href="dailytransaction.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bookingstatus.html">
+                        <i class="fa fa-list"></i>
+                        <span>Booking Status</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bookinglist.html">
+                        <i class="fa fa-address-book"></i>
+                        <span>Booking List</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staffsettings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="home.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>LOGOUT</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span>Daily</span>
+                <h2>Transactions</h2>
+            </div>
+            <div class="topsearch">
+                <i class="fa-solid fa-search"></i>
+                <input type="search" placeholder="Search" />
+            </div>
+        </div>
+        <div class="transaction--form">
+            <form id="transactionForm">
+                <h3>Customer Information</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="tourType">Tour Type:</label>
+                <select id="tourType" name="tourType" required>
+                    <option value="DayTour">Day Tour</option>
+                    <option value="NightTour">Night Tour</option>
+                </select>
+
+                <label for="numAdults">No. of Adults:</label>
+                <input type="number" id="numAdults" name="numAdults" min="0" required>
+
+                <label for="numChildren">No. of Children:</label>
+                <input type="number" id="numChildren" name="numChildren" min="0" required>
+
+                <label for="cabanaName">Cabana Name:</label>
+                <select id="cabanaName" name="cabanaName">
+                    <option value="None">None</option>
+                    <option value="KATMON">KATMON - 10 GUEST - PHP1000.00</option>
+                    <option value="NARRA">NARRA - 10 GUEST - PHP1000.00</option>
+                    <option value="BANABA">BANABA - 10 GUEST - PHP1000.00</option>
+                    <option value="KALIOS">KALIOS - 15 GUEST - PHP1500.00</option>
+                    <option value="BANI">BANI - 15 GUEST - PHP1500.00</option>
+                    <option value="DAPDAP">DAPDAP - 15 GUEST - PHP1500.00</option>
+                    <option value="KAMAGONG">KAMAGONG - 15 GUEST - PHP2000.00</option>
+                    <option value="ACACIA">ACACIA - 20 GUEST - PHP2000.00</option>
+                    <option value="MOLAVE">MOLAVE - 20 GUEST - PHP2000.00</option>
+                    <option value="TIBIG">TIBIG - 20 GUEST - PHP2500.00</option>
+                    <option value="DUHAT">DUHAT - 30 GUEST - PHP2500.00</option>
+                    <option value="ALMACIGA">ALMACIGA - 30 GUEST - PHP2500.00</option>
+                    <option value="ANONAS">ANONAS - 40 GUEST - PHP3500.00</option>
+                    <option value="CAMACHILE">CAMACHILE - 30 GUEST - PHP3500.00</option>
+                    <option value="KIOSK">KIOSK - 40 GUEST - PHP4000.00</option>
+                    <option value="BETIS">BETIS - 80 GUEST - PHP7000.00</option>
+                </select>
+
+                <label for="additionalFeeDescription">Additional Fee Description:</label>
+                <input type="text" id="additionalFeeDescription" name="additionalFeeDescription">
+
+                <label for="additionalFee">Additional Fee:</label>
+                <input type="number" id="additionalFee" name="additionalFee" min="0">
+
+                <button type="button" id="payNowButton">Check In</button>
+            </form>
+        </div>
+
+        <div class="transaction--list">
+            <h3>Transaction List</h3>
+            <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Tour Type</th>
+                        <th>No. of Adults</th>
+                        <th>No. of Children</th>
+                        <th>Cabana Name</th>
+                        <th>Total Bill</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transaction rows will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+        <div class="transaction--form">
+            <form id="guestRoomForm">
+                <h3>Guest Room Information</h3>
+                <label for="guestName">Name:</label>
+                <input type="text" id="guestName" name="guestName" required>
+                
+                <label for="numNights">No. of Nights:</label>
+                <input type="number" id="numNights" name="numNights" min="1" required>
+                
+                <label for="guestNumAdults">No. of Adults:</label>
+                <input type="number" id="guestNumAdults" name="guestNumAdults" min="1" required>
+                
+                <label for="guestNumChildren">No. of Children:</label>
+                <input type="number" id="guestNumChildren" name="guestNumChildren" min="0" required>
+                
+                <label for="roomName">Room Name:</label>
+                <select id="roomName" name="roomName" required>
+                    <option value="Suite Room">Suite Room - 2 GUEST - PHP2500.00</option>
+                    <option value="Deluxe Room">Deluxe Room - 2 GUEST - PHP3000.00</option>
+                    <option value="Family Room">Family Room - 4 GUEST - PHP3500.00</option>
+                    <option value="Villa Quartz">Villa Quartz - 2 GUEST - PHP3000.00</option>
+                    <option value="Villa Jade">Villa Jade - 4 GUEST - PHP5000.00</option>
+                    <option value="Villa Topaz">Villa Topaz - 4 GUEST - PHP5000.00</option>
+                    <option value="Villa Lazuli">Villa Lazuli - 20 GUEST - PHP20000.00</option>
+                </select>
+                
+                <label for="roomNumber">Room Number:</label>
+                <input type="text" id="roomNumber" name="roomNumber" required>
+                
+                <label for="guestAdditionalFeeDescription">Additional Fee Description:</label>
+                <input type="text" id="guestAdditionalFeeDescription" name="guestAdditionalFeeDescription">
+                
+                <label for="guestAdditionalFee">Additional Fee:</label>
+                <input type="number" id="guestAdditionalFee" name="guestAdditionalFee" min="0">
+                
+                <button type="button" id="guestPayNowButton">Check In</button>
+            </form>
+        </div>
+        
+        <div class="transaction--list">
+            <h3>Guest Room Transactions List</h3>
+            <table id="guestRoomTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>No. of Nights</th>
+                        <th>No. of Adults</th>
+                        <th>No. of Children</th>
+                        <th>Room Name</th>
+                        <th>Room Number</th>
+                        <th>Total Bill</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>        
+    </section>
+</body>
+</html>

@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+}
+
+/*SIDEBAR*/
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 380px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(5, 97, 36, 0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+    width: 100%;
+}
+
+.logo-img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin-top: auto; 
+    flex-grow: 1; 
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .active {
+    background: #e0e0e058;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+.logout {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.logout a {
+    color: #fff;
+    text-align: center;
+    display: block;
+    padding: 1rem;
+    background: rgba(255, 0, 0, 0.6);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logout a:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+/*MAIN CONTENT*/
+.main--content {
+    flex-grow: 1;
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header--title span {
+    display: block;
+    font-size: 1rem;
+    color: #0f531a;
+}
+
+.header--title h2 {
+    font-size: 2rem;
+    color: #08460b;
+}
+
+.topsearch {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+}
+
+.topsearch input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    padding-left: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+}
+
+.topsearch i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* RESORT TRANSACTIONS */
+.transaction--form {
+    margin-bottom: 2rem;
+}
+
+.transaction--form form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.transaction--form form h3 {
+    margin-bottom: 1rem;
+    color: #0f531a;
+}
+
+.transaction--form form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.transaction--form form input,
+.transaction--form form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.transaction--form form button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #0f531a;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.transaction--form form button:hover {
+    background: #08460b;
+}
+
+/* TRANSACTION LIST */
+.transaction--list {
+    margin-top: 1rem;
+    margin-bottom: 2rem; /* Add margin to the bottom */
+}
+
+.transaction--list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.transaction--list table th,
+.transaction--list table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction--list table th {
+    background: #0f531a;
+    color: #fff;
+}
+
+.transaction--list table td {
+    background: #fff;
+}
+
+.transaction--list table td button {
+    padding: 0.5rem 1rem;
+    background: #08460b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.transaction--list table td button:hover {
+    background: #063d07;
+}
+
+
+/* RESORT TRANSACTIONS HEADER */
+#resortTransactionsHeader {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #0f531a;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+/* Guest Rooms Walk-in Transaction Form Styles */
+#guestRoomTransactionHeader {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    color: #0f531a;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.transaction--form {
+    margin-bottom: 2rem;
+}
+
+.transaction--form form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.transaction--form form h3 {
+    margin-bottom: 1rem;
+    color: #0f531a;
+}
+
+.transaction--form form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.transaction--form form input,
+.transaction--form form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.transaction--form form button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #0f531a;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.transaction--form form button:hover {
+    background: #08460b;
+}
+
+/* Guest Rooms Walk-in Transaction List Styles */
+.transaction--list {
+    margin-top: 2rem;
+}
+
+.transaction--list h3 {
+    margin-bottom: 1rem;
+    color: #0f531a;
+}
+
+.transaction--list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.transaction--list table th,
+.transaction--list table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction--list table th {
+    background: #0f531a;
+    color: #fff;
+}
+
+.transaction--list table td {
+    background: #fff;
+}
+
+.transaction--list table td button {
+    padding: 0.5rem 1rem;
+    background: #08460b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.transaction--list table td button:hover {
+    background: #063d07;
+}

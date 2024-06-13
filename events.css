@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.hero {
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3)), url('eve.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoomChangeBg 10s infinite;
+}
+
+@keyframes zoomChangeBg {
+    0% {
+        background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3)), url('eve.jpg');
+        background-size: 100%;
+    }
+    50% {
+        background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3)), url('even.jpg');
+        background-size: 110%;
+    }
+    100% {
+        background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3)), url('eve.jpg');
+        background-size: 100%;
+    }
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    padding: 10px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: top 0.3s ease; 
+}
+nav .logo{
+    width: 400px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+nav ul li a:hover {
+    color: #7fc142;
+}
+nav ul li .primary-btn {
+    display: inline-block;
+    background-color: #7fc142; 
+    color: #fff;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+nav ul li .primary-btn:hover {
+    background-color: #5e9338;
+}
+
+/*divider*/
+.divider {
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px; /* Adjust margin as needed */
+}
+
+.divider h1 {
+    position: relative;
+    display: inline-block;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px; /* Adjust the font size as needed */
+    color: #000; /* Set the text color */
+}
+
+.divider h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Adjust the position of the underline */
+    width: 150%; /* Adjust the width of the underline */
+    height: 2px;
+    background-color: #000; /* Change the underline color as needed */
+    transform: translateX(-50%);
+}
+
+/* Events Package Management */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/*Package Info Container */
+.event-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+}
+
+.event-card h2 {
+    margin-top: 10px;
+    color: #007bff;
+}
+
+.event-card p {
+    margin: 5px 0;
+}
+
+.event-card .price {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.event-card .rating {
+    margin: 10px 0;
+}
+
+.event-card .rating span {
+    color: #ffdd00;
+    font-size: 20px;
+}
+
+.event-card .register-now {
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.event-card .register-now:hover {
+    background: #218838;
+}
+
+
+/*maps and contacts*/
+.mapsec {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    flex-direction: row;
+    text-align: center;
+    height: 360px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    padding-left: 50px;
+    position: relative;
+}
+.mapcont {
+    display: flex;
+    margin: 0 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/*LOGO1*/
+.logoo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logoo img {
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); 
+    transition: filter 0.3s ease-in-out; 
+}
+.logoo img:hover {
+    cursor: pointer; 
+    transform: scale(1.05);
+}
+/*SITEMAP*/
+.smap {
+    display: flex;
+    margin: 0 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.smap h2 {
+    margin: 0;
+    color: rgb(18, 71, 39);
+}
+
+.smap ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.smap ul li {
+    margin-top: 30px; /* Add margin from the top */
+    margin-bottom: 5px;
+}
+
+.smap ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 20px; /* Add left padding to the links */
+    display: inline-block; /* Ensure proper padding behavior */
+}
+
+.smap ul li a:hover {
+    color: #7fc142;
+}
+
+/*GET IN TOUCH*/
+.mapcont h2 {
+    margin: 0;
+    color: rgb(18, 71, 39);
+}
+.mapcont p {
+    margin: 0;
+    color: gray;
+}
+
+.mapcont figure {
+    margin: 10px 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.mapcont img {
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.mapcont figure:not(:last-child) {
+    margin-right: 20px; 
+}
+
+/*GMAPS*/
+.map-container {
+    display: flex;
+    align-items: center;
+}
+
+.map-container iframe {
+    margin-left: auto; 
+    margin-top: 7px;
+}
+
+/*Socmed links*/
+.socmed {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.socmed ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.socmed ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.socmed a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5em;
+}
+
+.socmed a i {
+    margin: 0 5px;
+}
+
+
+/*FOOTER*/
+.footer {
+    background-color: #333; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.footer .focont ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .focont ul li {
+    margin: 10px 10px;
+}
+
+.footer .focont ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*LOGINFORM*/
+/* Modal container */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Modal content */
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent background */
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px; /* increased width */
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form styling */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginForm label {
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-container .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 18px; /* adjust icon size as needed */
+}
+
+#loginForm button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginForm button:hover {
+    background-color: #555;
+}
+
+

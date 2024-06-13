@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <ul class="menu">
+                <a href="#" class="logo-link">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                </a>
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="roomsmanagement.html">
+                        <i class="fas fa-home"></i>
+                        <span>Rooms Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resortmanagement.html">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Resort Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="eventsmanagement.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events Management</span>
+                    </a>
+                </li>               
+                <li>
+                    <a href="usersmanagement.html">
+                        <i class="fas fa-user"></i>
+                        <span>Users Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="adminsettings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="home.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>LOGOUT</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span>Primary</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="topsearch">
+                <i class="fa-solid fa-search"></i>
+                <input type="search" placeholder="Search" />
+            </div>
+        </div>
+        <div class="cards--container">
+            <div class="card blue">
+                <i class="fas fa-calendar-check"></i>
+                <h3>13</h3>
+                <p>Bookings</p>
+            </div>
+            <div class="card orange">
+                <i class="fas fa-suitcase-rolling"></i>
+                <h3>2</h3>
+                <p>Arrivals</p>
+            </div>
+            <div class="card red">
+                <i class="fas fa-walking"></i>
+                <h3>1</h3>
+                <p>Departures</p>
+            </div>
+            <div class="card green">
+                <i class="fas fa-bed"></i>
+                <h3>10.17%</h3>
+                <p>Room Occupied</p>
+            </div>
+        </div>
+        <div class="reservations-and-activity">
+            <div class="reservations">
+                <h3>Reservations</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Guest</th>
+                            <th>Reservation</th>
+                            <th>Room</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Manilyn Catarong</td>
+                            <td>10001</td>
+                            <td>Family Room</td>
+                            <td>Arrival</td>
+                        </tr>
+                        <tr>
+                            <td>Marc Gigante</td>
+                            <td>10002</td>
+                            <td>Suite Room</td>
+                            <td>Arrival</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="todays-activity">
+                <h3>Today's Activity</h3>
+                <div class="activity-details">
+                    <div><strong>3</strong> Booked Today</div>
+                    <div><strong>18</strong> Room Nights</div>
+                    <div><strong>PHP84000.00</strong> Revenue</div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Guest</th>
+                            <th>Revenue</th>
+                            <th>Check-in</th>
+                            <th>Nights</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Norlito Nabos</td>
+                            <td>PHP5000.00</td>
+                            <td>30/06/2020</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Erwin Flores</td>
+                            <td>PHP7000.00</td>
+                            <td>28/06/2020</td>
+                            <td>6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="dashboard-chart">
+
+        </div>
+    </section>
+</body>
+</html>
